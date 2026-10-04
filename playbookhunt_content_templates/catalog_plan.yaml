@@ -1,0 +1,116 @@
+# Popular Use Cases (homepage carousel → /use-cases/<slug>) and Starter kits (→ /k/<slug>).
+# A use case groups playbooks across categories by user goal; a starter kit is a small ordered bundle.
+
+use_cases:
+  - slug: cut-monthly-bills
+    title: Cut monthly bills
+    description: Lower recurring bills with playbooks people have actually used.
+    gradient: ["#2F4F46", "#5E7F73"] # tile background (dark → light)
+    sort: 1
+    playbooks:
+      [
+        lower-your-internet-bill,
+        cut-your-phone-bill,
+        cheaper-car-insurance,
+        cancel-unused-subscriptions,
+        lower-your-energy-bill,
+      ]
+  - slug: cheaper-flights
+    title: Cheaper flights
+    description: Find, book and rebook flights for less.
+    gradient: ["#8A5A1F", "#C0925A"]
+    sort: 2
+    playbooks:
+      [
+        cheapest-flight-to-europe,
+        find-award-flights-with-points,
+        claim-flight-delay-compensation,
+      ]
+  - slug: plan-a-trip
+    title: Plan a trip
+    description: Itineraries, checklists and packing lists tuned to you.
+    gradient: ["#3E3F63", "#7E7FA6"]
+    sort: 3
+    playbooks:
+      [
+        plan-7-days-in-japan,
+        weekend-city-break-itinerary,
+        family-trip-with-kids,
+      ]
+  - slug: doctor-visit-prep
+    title: Doctor visit prep
+    description: Walk into appointments prepared (not medical advice).
+    gradient: ["#4A6670", "#8FA9B0"]
+    sort: 4
+    playbooks:
+      [prepare-questions-for-my-doctor, appeal-an-insurance-claim-denial]
+  - slug: research-competitors
+    title: Research competitors
+    description: Structured competitor and pricing research for small businesses.
+    gradient: ["#6B3B4E", "#A5708A"]
+    sort: 5
+    playbooks: [research-my-competitors, pricing-analysis]
+  # Template:
+  # - slug: ""
+  #   title: ""
+  #   description: ""
+  #   gradient: ["#", "#"]
+  #   sort: 0
+  #   playbooks: []
+
+starter_kits:
+  - slug: cut-your-bills-kit
+    title: Cut your bills kit
+    blurb: Internet, phone, insurance and subscriptions — the playbooks that saved people the most.
+    illustration: "" # Artwork not supplied yet.
+    featured: true
+    playbooks:
+      [
+        lower-your-internet-bill,
+        cut-your-phone-bill,
+        cheaper-car-insurance,
+        cancel-unused-subscriptions,
+        get-a-bank-fee-refunded,
+        analyze-my-monthly-spending,
+      ]
+  - slug: japan-trip-kit
+    title: Japan trip kit
+    blurb: Flights, rail pass math, itinerary, packing and phrases, from booking to boarding.
+    illustration: "" # Artwork not supplied yet.
+    featured: true
+    playbooks:
+      [
+        cheapest-flight-to-europe,
+        plan-7-days-in-japan,
+        visa-and-entry-checklist,
+        weather-based-packing-list,
+      ]
+  - slug: small-business-launch-kit
+    title: Small-business launch kit
+    blurb: Competitor research, pricing, Google profile and a first marketing plan.
+    illustration: "" # Artwork not supplied yet.
+    featured: true
+    playbooks:
+      [
+        research-my-competitors,
+        pricing-analysis,
+        google-business-profile-and-review-replies,
+        marketing-plan-for-my-small-business,
+      ]
+  # Template:
+  # - slug: ""
+  #   title: ""
+  #   blurb: ""
+  #   illustration: ""
+  #   featured: false
+  #   playbooks: []
+
+categories: # fixed list; icons show in chips, the Trending switcher and /categories
+  - { slug: personal-finance, name: Personal finance, icon: "$" }
+  - { slug: travel-booking, name: Travel – booking, icon: "✈" }
+  - { slug: travel-planning, name: Travel – planning, icon: "map" }
+  - { slug: shopping, name: Shopping, icon: "bag" }
+  - { slug: small-business, name: Small business, icon: "store" }
+  - { slug: productivity, name: Productivity, icon: "bolt" }
+  - { slug: health, name: Health, icon: "heart" }
+  - { slug: creativity, name: Creativity, icon: "palette" }

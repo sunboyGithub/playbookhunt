@@ -1,0 +1,54 @@
+ID,Phase,Workstream,Task,Details / acceptance criteria,Depends on,Coding prompt,Priority,Status,Owner,Start,Due,Notes
+T01,P0 Foundations,Product,Confirm name and buy domain,"Name decided: Playbook Hunt. Register playbookhunt.com (+ playbookhunt.ai; optional huntplaybook.com redirect); reserve @playbookhunt on X, Threads, Instagram, TikTok, Reddit, 小红书; quick trademark search",,,P0,In progress,,,,
+T02,P0 Foundations,Design,Finalize design tokens,"Colors, type, radius, spacing per plan Part 2; logo wordmark",,,P0,Not started,,,,
+T03,P0 Foundations,Design,Hi-fi mockups for home and detail,Homepage v2 sections and detail page based on wireframes; card in 3 densities,T02,,P1,Not started,,,,
+T04,P0 Foundations,Eng,Create accounts and projects,"DONE: GitHub repo sunboyGithub/playbookhunt created and pushed (initial commit). TODO: Supabase (dev + prod), Vercel, Resend, PostHog, Sentry on free plans",,,P0,In progress,,,,
+T05,P0 Foundations,Eng,Write AGENTS.md project brief,Run coding prompt P0,T04,P0,P0,Not started,,,,
+T06,P1 Content,Content,Source ~100 candidate use cases,"From X, Reddit, Threads, 小红书, AI communities; log link + handle + outcome type in Seed Playbooks",,,P0,Not started,,,,
+T07,P1 Content,Content,Select 48 playbooks (6 per category),Measurable outcome; broad appeal; feasible with Muse,T06,,P0,Not started,,,,
+T08,P1 Content,Content,Test each playbook with Muse (2x),"Record inputs, output, result, time, $ saved; capture redacted screenshots",T07,,P0,Not started,,,,
+T09,P1 Content,Content,Write playbook YAML files,Use bonus content-authoring prompt; validate with content:validate,T08;T13,Bonus,P0,Not started,,,,
+T10,P1 Content,Content,Create outcome preview images,"Redacted before/after bills, itinerary snapshots, report excerpts; >= 30 playbooks",T08,,P1,Not started,,,,
+T11,P1 Content,Content,Define 5-6 starter kits,"e.g. Cut your bills kit, Japan trip kit, Small-business launch kit",T07,,P1,Not started,,,,
+T12,P2 MVP build,Eng,Scaffold app,Next.js + Tailwind + shadcn + Supabase helpers + tooling + shell,T05,P1,P0,Not started,,,,
+T13,P2 MVP build,Eng,Database schema + RLS + types,All v1 tables; RLS tests pass; seed categories/agents,T12,P2,P0,Not started,,,,
+T14,P2 MVP build,Eng,Content import pipeline,YAML schema; idempotent import; versioning; 3 example playbooks,T13,P3,P0,Not started,,,,
+T15,P2 MVP build,Eng,Homepage v2 + PlaybookCard + ⌘K,All 10 sections; threshold formatter tested,T14,P4,P0,Not started,,,,
+T16,P2 MVP build,Eng,Search + category + starter kit pages,FTS + trigram + synonyms; URL filters; empty state + requests,T14,P5,P0,Not started,,,,
+T17,P2 MVP build,Eng,Playbook detail page,Matches wireframe 2; SEO; Early states,T14,P6,P0,Not started,,,,
+T18,P2 MVP build,Eng,Try flow + agent picker,Client-side templating; try events; followups,T17,P7,P0,Not started,,,,
+T19,P2 MVP build,Eng,Auth + report form + evidence + follow-up emails,<= 30s report; private evidence; cron reminders,T18,P8,P0,Not started,,,,
+T20,P2 MVP build,Eng,Stats aggregation + ranking,Pure TS module with 6 fixture scenarios; refresh job,T19,P9,P0,Not started,,,,
+T21,P2 MVP build,Eng,Admin + moderation,Reports queue; evidence review; playbooks; collections; requests; audit log,T20,P10,P0,Not started,,,,
+T22,P2 MVP build,Eng,Analytics + SEO + trust pages,PostHog events; sitemap; OG; /how-we-verify; Lighthouse,T17,P11,P1,Not started,,,,
+T23,P2 MVP build,Eng,QA + hardening + CI + launch checklist,E2E full loop; rate limits; Turnstile; CSP; CI green,T21;T22,P12,P0,Not started,,,,
+T24,P2 MVP build,Content,Import all 48 playbooks + starter kits to staging,content:import; spot-check pages,T09;T14,,P0,Not started,,,,
+T25,P2 MVP build,Product,Write /how-we-verify copy,Plain-language methodology; thresholds; privacy; no votes/referrals in rank,T20,P11,P1,Not started,,,,
+T26,P2 MVP build,Ops,Privacy policy + terms + health/finance disclaimers,Legal review before public launch,,,P1,Not started,,,,
+T27,P3 Private beta,Growth,Recruit 50-150 beta testers,"Friends, AI communities, waitlist; mix of categories",T23,,P0,Not started,,,,
+T28,P3 Private beta,Growth,Assign hero playbooks to testers,Focus 10 hero playbooks to reach n >= 20 each,T27,,P0,Not started,,,,
+T29,P3 Private beta,Product,Tune ranking weights and thresholds,Review evidence_score ordering vs intuition; adjust config,T28,P9,P1,Not started,,,,
+T30,P3 Private beta,Product,Iterate report form,Target median report time <= 45s; try->report >= 15%,T28,P8,P1,Not started,,,,
+T31,P3 Private beta,Ops,Moderate reports + evidence daily,Approve/reject; outliers; update last_verified,T28,P10,P0,Not started,,,,
+T32,P3 Private beta,Product,Beta retro + fix list,Collect feedback; prioritize fixes before launch,T29;T30,,P1,Not started,,,,
+T33,P4 Public launch,Growth,Product Hunt launch,"Assets, maker comment, hunter, launch day plan",T32,,P0,Not started,,,,
+T34,P4 Public launch,Growth,Social distribution posts,"Reddit/X/Threads/小红书 posts that link to specific playbook pages, crediting original creators",T32,,P0,Not started,,,,
+T35,P4 Public launch,Growth,SEO landing pages per playbook,Check indexing; titles; internal links; OG,T22,,P1,Not started,,,,
+T36,P4 Public launch,Content,First Playbook Hunt Results Awards,"Outcome-based ""best of"" lists per category (only n >= 20)",T33,,P2,Not started,,,,
+T37,P4 Public launch,Content,Monthly re-verification of top playbooks,Re-run; bump version/changelog if prompt changes,T24,,P1,Not started,,,,
+T38,P5 Creators,Eng,Creator profiles + submissions,Submit form; review queue; /u/[handle]; featured creators,T33,P13,P1,Not started,,,,
+T39,P5 Creators,Eng,Inspired-by Thank + Claim,Verification code in bio; admin verify; never in rank,T38,P14,P1,Not started,,,,
+T40,P5 Creators,Eng,Referral links + useful votes,Labeled/separate; tests prove zero rank effect,T38,P15,P2,Not started,,,,
+T41,P5 Creators,Growth,Notify credited creators,"""Your idea helped N people"" outreach with claim link",T39,,P1,Not started,,,,
+T42,P6 Agent-agnostic,Product,Per-agent success breakdown,Detail page tabs by agent; best agent for this task,T33,,P2,Not started,,,,
+T43,P6 Agent-agnostic,Eng,Verify and enable open-in URLs for more agents,Confirm each provider's prefill support; config only,T18,P7,P2,Not started,,,,
+T44,P6 Agent-agnostic,Product,Recommendation layer / API exploration,"""Tell me the task, show best-evidence workflows"" API or embed",T42,,P2,Not started,,,,
+T45,P0 Foundations,Product,Get official Muse avatar + brand permission,Avatar + blue now taken from the Muse app screenshots; still need written OK from Muse,,P4,P0,Not started,,,,Design review round 1
+T46,P0 Foundations,Product,Confirm Muse deep link / prompt prefill,Decides whether Open in Muse pre-fills or falls back to copy + open,,P7,P0,Not started,,,,Design review round 1
+T47,P0 Foundations,Product,Confirm Muse referral terms (up to 1B tokens),Official terms URL + wording for homepage note and report form,,P8,P1,Not started,,,,Design review round 1
+T48,P0 Foundations,Product,Verify ChatGPT Dots and Grok-Bot names/links/capabilities,Set agents.status and launch URLs; ChatGPT chip routes to Dots,,P2,P1,Not started,,,,Design review round 1
+T49,P1 Content,Design,Commission starter-kit illustrations,Palette-matched art for each kit (e.g. Mount Fuji for Japan),T11,P4,P2,Not started,,,,Design review round 1
+T50,P2 MVP build,Eng,Create a playbook (beta) form,/create form into admin review queue; no public profiles yet,T21,P10b,P1,Not started,,,,Design review round 1
+T51,P2 MVP build,Eng,Sign-in modal + pending-action resume,"One modal (Google, Facebook, email link) with context titles; resume save/report/create after auth (Frame 8)",T12,P8,P0,Not started,,,,Design review round 2
+T52,P2 MVP build,Eng,Save + My playbooks page,"Save/unsave toggle, toast, /me tabs Saved/Tried/Reported, Updated-since-saved badge (Frame 9)",T51,P8,P0,Not started,,,,Design review round 2
+T53,P0 Foundations,Product,Verify Instinct agent name/link,Add to agents table as coming_soon once confirmed,,P2,P2,Not started,,,,Design review round 2
