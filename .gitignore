@@ -1,0 +1,5 @@
+# Claude Code local settings — machine-specific and may contain credentials
+.claude/settings.local.json
+
+# The app workspace is its own git repository (own history, own .gitignore)
+playbookhunt_app/
